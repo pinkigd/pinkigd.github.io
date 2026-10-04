@@ -57,6 +57,7 @@ canvas { display: block; }
   background: var(--cream); color: var(--ink); font-size: 12px; font-weight: 600; transition: transform .25s, background .25s;
 }
 .pill:hover { transform: translateY(-1px); background: #fff; }
+.pill { white-space: nowrap; }
 .burger { width: 34px; height: 34px; display: grid; place-content: center; gap: 6px; border-radius: 50%; }
 .burger i { display: block; width: 18px; height: 1.5px; background: var(--cream); transition: transform .3s; }
 .burger[aria-expanded="true"] i:first-child { transform: translateY(3.75px) rotate(45deg); }
@@ -335,4 +336,10 @@ footer .c { color: var(--muted-on-ink); text-align: center; }
   .marquee .track, .hero-foot .scroll i { animation: none; }
   #name .ch { animation: none; }
   .rv { transition: none; }
+}
+
+@media (max-width: 400px) {
+  .nav .brand { font-size: 12.5px; letter-spacing: 0; }
+  .nav .right { gap: 8px; }
+  .nav .pill { display: none; }
 }
